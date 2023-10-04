@@ -52,7 +52,7 @@ with col2:
   ax.set_ylabel('Predicted')
   st.pyplot(fig)
 
-iris = datasets.load_iris()
+iris = sklearn.datasets.load_iris()
 X, y = iris.data, iris.target
 
 # Split the dataset into training and testing sets
