@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn import datasets
+import sklearn.datasets
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
@@ -11,7 +11,7 @@ st.set_page_config(layout="wide")
 st.title('Iris Dataset - Actual vs Predicted')
 
 # Load Iris dataset
-iris = datasets.load_iris()
+iris = sklearn.datasets.load_iris()
 X = pd.DataFrame(iris.data, columns=iris.feature_names)
 y = iris.target
 
