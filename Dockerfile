@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python", "train_model.py"]
+CMD ["python", "main.py"]
