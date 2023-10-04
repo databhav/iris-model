@@ -15,8 +15,8 @@ jobs:
       - name: Build and Push Docker image
         run: |
            docker build -t my-ml-model:latest .
-           echo ${{ secrets.DOCKER_ACCESS_TOKEN }} | docker login --username your-dockerhub-username --password-stdin
-           docker tag my-ml-model:latest your-dockerhub-username/my-ml-model:latest
-           docker push your-dockerhub-username/my-ml-model:latest
+           echo ${{ secrets.DOCKER_ACCESS_TOKEN }} | docker login --username databhav --password-stdin
+           docker tag my-ml-model:latest databhav/my-ml-model:latest
+           docker push databhav/my-ml-model:latest
         env:
           DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
